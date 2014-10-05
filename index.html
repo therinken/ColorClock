@@ -6,10 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<div class="container">
+<div class="container loader">
+	<img id="image-loader" src="images/ajax-loader.gif" alt="loading..."/>
 	<div id="clockbox"></div>
 </div>
 
-
+<script language="javascript" type="text/javascript">
+  $(window).load(function() {
+    $('#loading').hide();
+  });
+</script>
 </body>
 </html>

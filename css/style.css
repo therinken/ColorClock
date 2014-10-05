@@ -12,6 +12,25 @@
     top: 0; left: 0; bottom: 0; right: 0;
     background-color: white;
     -webkit-animation: grad 5s infinite; /* Chrome, Safari, Opera */
+    -moz-animation: grad 5s infinite; /* Firefox */
+}
+.loader {
+    width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+#image-loader{
+    position: absolute;
+    padding-top: 33%;
+    margin-left: -20px;
+    z-index: 100;
 }
 #clockbox{
     position: relative;
@@ -20,13 +39,13 @@
     font-size: 3em;
     font-family: Marker Felt;
     display: inline-block;
-    padding-top: 37%;
+    padding-top: 25%;
     font-weight: 600;
 }
 
 @-webkit-keyframes grad {
     0% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7d4fb 0%,#badefb 10%,#c9e6fc 20%,#d5ecfc 30%,#e0f2fc 40%,#ecf9fc 50%,#e0f2fc 60%,#d5ecfc 70%,#c9e6fc 80%,#badefb 90%,#a7d4fb 100%); 
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7d4fb 0%,#badefb 10%,#c9e6fc 20%,#d5ecfc 30%,#e0f2fc 40%,#ecf9fc 50%,#e0f2fc 60%,#d5ecfc 70%,#c9e6fc 80%,#badefb 90%,#a7d4fb 100%);
 }
     5% {
     background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7e2fb 2%,#bbe9fb 12%,#caeffc 22%,#d6f3fc 32%,#e0f7fc 42%,#ecfcfc 52%,#e0f7fc 60%,#d6f3fc 72%,#caeffc 82%,#bbe9fb 92%,#a7e2fb 102%);
@@ -88,4 +107,72 @@
     100% {
     background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7d4fb 0%,#badefb 10%,#c9e6fc 20%,#d5ecfc 30%,#e0f2fc 40%,#ecf9fc 50%,#e0f2fc 60%,#d5ecfc 70%,#c9e6fc 80%,#badefb 90%,#a7d4fb 100%); 
 }
-} 
+}
+
+
+@-moz-keyframes grad {
+    0% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7d4fb 0%,#badefb 10%,#c9e6fc 20%,#d5ecfc 30%,#e0f2fc 40%,#ecf9fc 50%,#e0f2fc 60%,#d5ecfc 70%,#c9e6fc 80%,#badefb 90%,#a7d4fb 100%);
+}
+    5% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7e2fb 2%,#bbe9fb 12%,#caeffc 22%,#d6f3fc 32%,#e0f7fc 42%,#ecfcfc 52%,#e0f7fc 60%,#d6f3fc 72%,#caeffc 82%,#bbe9fb 92%,#a7e2fb 102%);
+}
+    10% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7f0fb 4%,#bbf4fb 14%,#caf7fc 24%,#d6f9fc 34%,#e0fcfc 44%,#ecfcfa 54%,#e0fcfc 60%,#d6f9fc 74%,#caf7fc 84%,#bbf4fb 94%,#a7f0fb 104%);
+}
+    15% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbf8 6%,#bbfbf8 16%,#cafcf9 26%,#d6fcf9 36%,#e0fcf8 46%,#ecfcf7 56%,#e0fcf8 60%,#d6fcf9 76%,#cafcf9 86%,#bbfbf8 96%,#a7fbf8 106%);
+}
+    20% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbea 8%,#bbfbed 18%,#cafcf0 28%,#d6fcf3 38%,#e0fcf3 48%,#ecfcf4 58%,#e0fcf3 60%,#d6fcf3 78%,#cafcf0 88%,#bbfbed 98%,#a7fbea 108%);
+}
+    25% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbdc 10%,#bbfbe2 20%,#cafce8 30%,#d6fcec 40%,#e0fcee 50%,#ecfcf2 60%,#e0fcee 60%,#d6fcec 80%,#cafce8 90%,#bbfbe2 100%,#a7fbdc 110%);
+}
+    30% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbce 8%,#bbfbd8 18%,#cafce0 28%,#d6fce6 38%,#e0fcea 48%,#ecfcef 58%,#e0fcea 60%,#d6fce6 78%,#cafce0 88%,#bbfbd8 98%,#a7fbce 108%);
+}
+    35% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbc0 6%,#bbfbcd 16%,#cafcd7 26%,#d6fcdf 36%,#e0fce5 46%,#ecfcec 56%,#e0fce5 60%,#d6fcdf 76%,#cafcd7 86%,#bbfbcd 96%,#a7fbc0 106%);
+}
+    40% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbb2 4%,#bbfbc2 14%,#cafccf 24%,#d6fcd9 34%,#e0fce0 44%,#eefcec 54%,#e0fce0 60%,#d6fcd9 74%,#cafccf 84%,#bbfbc2 94%,#a7fbb2 104%);
+}
+    45% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #aafba7 2%,#befbbb 12%,#cdfcca 22%,#d9fcd6 32%,#e4fce0 42%,#f1fcec 52%,#e4fce0 60%,#d9fcd6 72%,#cdfcca 82%,#befbbb 92%,#aafba7 102%);
+}
+    50% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #b8fba7 0%,#c9fbbb 10%,#d6fcca 20%,#dffcd6 30%,#e9fce0 40%,#f4fcec 50%,#e9fce0 60%,#dffcd6 70%,#d6fcca 80%,#c9fbbb 90%,#b8fba7 100%);
+}
+    55% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #aafba7 2%,#befbbb 12%,#cdfcca 22%,#d9fcd6 32%,#e4fce0 42%,#f1fcec 52%,#e4fce0 60%,#d9fcd6 72%,#cdfcca 82%,#befbbb 92%,#aafba7 102%);
+}
+    60% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbb2 4%,#bbfbc2 14%,#cafccf 24%,#d6fcd9 34%,#e0fce0 44%,#eefcec 54%,#e0fce0 60%,#d6fcd9 74%,#cafccf 84%,#bbfbc2 94%,#a7fbb2 104%);
+}
+    65% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbc0 6%,#bbfbcd 16%,#cafcd7 26%,#d6fcdf 36%,#e0fce5 46%,#ecfcec 56%,#e0fce5 60%,#d6fcdf 76%,#cafcd7 86%,#bbfbcd 96%,#a7fbc0 106%);
+}
+    70% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbce 8%,#bbfbd8 18%,#cafce0 28%,#d6fce6 38%,#e0fcea 48%,#ecfcef 58%,#e0fcea 60%,#d6fce6 78%,#cafce0 88%,#bbfbd8 98%,#a7fbce 108%);
+}
+    75% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbdc 10%,#bbfbe2 20%,#cafce8 30%,#d6fcec 40%,#e0fcee 50%,#ecfcf2 60%,#e0fcee 60%,#d6fcec 80%,#cafce8 90%,#bbfbe2 100%,#a7fbdc 110%);
+}
+    80% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbea 8%,#bbfbed 18%,#cafcf0 28%,#d6fcf3 38%,#e0fcf3 48%,#ecfcf4 58%,#e0fcf3 60%,#d6fcf3 78%,#cafcf0 88%,#bbfbed 98%,#a7fbea 108%);
+}
+    85% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7fbf8 6%,#bbfbf8 16%,#cafcf9 26%,#d6fcf9 36%,#e0fcf8 46%,#ecfcf7 56%,#e0fcf8 60%,#d6fcf9 76%,#cafcf9 86%,#bbfbf8 96%,#a7fbf8 106%);
+}
+    90% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7f0fb 4%,#bbf4fb 14%,#caf7fc 24%,#d6f9fc 34%,#e0fcfc 44%,#ecfcfa 54%,#e0fcfc 60%,#d6f9fc 74%,#caf7fc 84%,#bbf4fb 94%,#a7f0fb 104%);
+}
+    95% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7e2fb 2%,#bbe9fb 12%,#caeffc 22%,#d6f3fc 32%,#e0f7fc 42%,#ecfcfc 52%,#e0f7fc 60%,#d6f3fc 72%,#caeffc 82%,#bbe9fb 92%,#a7e2fb 102%);
+}
+    100% {
+background-image: -moz-radial-gradient(center center, circle farthest-corner, #a7d4fb 0%,#badefb 10%,#c9e6fc 20%,#d5ecfc 30%,#e0f2fc 40%,#ecf9fc 50%,#e0f2fc 60%,#d5ecfc 70%,#c9e6fc 80%,#badefb 90%,#a7d4fb 100%);
+}
+
+}
