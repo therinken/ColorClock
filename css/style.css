@@ -27,7 +27,7 @@
 }
 #image-loader{
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
@@ -39,7 +39,7 @@
     font-size: 3em;
     font-family: Marker Felt;
     display: inline-block;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 600;
