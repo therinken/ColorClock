@@ -2,15 +2,7 @@
     font-family: Marker Felt;
     src: url(fonts/MarkerFelt.ttf);
 }
-#clockbox{
-    position: relative;
-    color: white;
-    font-size: 3em;
-    font-family: Marker Felt;
-    display: inline-block;
-    padding-top: 37%;
-    font-weight: 600;
-}
+
 .container {
     text-align: center;
     position: absolute;
@@ -21,33 +13,79 @@
     background-color: white;
     -webkit-animation: grad 5s infinite; /* Chrome, Safari, Opera */
 }
+#clockbox{
+    position: relative;
+    color: gray;
+    opacity: 0.5;
+    font-size: 3em;
+    font-family: Marker Felt;
+    display: inline-block;
+    padding-top: 37%;
+    font-weight: 600;
+}
 
 @-webkit-keyframes grad {
     0% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #838de8 0%, #5b619d 20%, #838de8 29%, #838de8 29%, #5b619d 30%, #838de8 37%, #5b619d 38%, #838de8 56%, #5b619d 58%, #838de8 75%, #5b619d 88%, #5b619d 100%); 
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7d4fb 0%,#badefb 10%,#c9e6fc 20%,#d5ecfc 30%,#e0f2fc 40%,#ecf9fc 50%,#e0f2fc 60%,#d5ecfc 70%,#c9e6fc 80%,#badefb 90%,#a7d4fb 100%); 
 }
-    12% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #838de8 0%, #5b619d 21%, #838de8 30%, #838de8 30%, #5b619d 31%, #838de8 36%, #5b619d 39%, #838de8 57%, #5b619d 59%, #838de8 76%, #5b619d 89%, #5b619d 100%);
+    5% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7e2fb 2%,#bbe9fb 12%,#caeffc 22%,#d6f3fc 32%,#e0f7fc 42%,#ecfcfc 52%,#e0f7fc 60%,#d6f3fc 72%,#caeffc 82%,#bbe9fb 92%,#a7e2fb 102%);
+}
+    10% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7f0fb 4%,#bbf4fb 14%,#caf7fc 24%,#d6f9fc 34%,#e0fcfc 44%,#ecfcfa 54%,#e0fcfc 60%,#d6f9fc 74%,#caf7fc 84%,#bbf4fb 94%,#a7f0fb 104%);
+}
+    15% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbf8 6%,#bbfbf8 16%,#cafcf9 26%,#d6fcf9 36%,#e0fcf8 46%,#ecfcf7 56%,#e0fcf8 60%,#d6fcf9 76%,#cafcf9 86%,#bbfbf8 96%,#a7fbf8 106%);
+}
+    20% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbea 8%,#bbfbed 18%,#cafcf0 28%,#d6fcf3 38%,#e0fcf3 48%,#ecfcf4 58%,#e0fcf3 60%,#d6fcf3 78%,#cafcf0 88%,#bbfbed 98%,#a7fbea 108%);
 }
     25% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #838de8 0%, #5b619d 22%, #838de8 31%, #838de8 31%, #5b619d 32%, #838de8 37%, #5b619d 40%, #838de8 58%, #5b619d 60%, #838de8 77%, #5b619d 90%, #5b619d 100%);
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbdc 10%,#bbfbe2 20%,#cafce8 30%,#d6fcec 40%,#e0fcee 50%,#ecfcf2 60%,#e0fcee 60%,#d6fcec 80%,#cafce8 90%,#bbfbe2 100%,#a7fbdc 110%);
 }
-    37% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #838de8 0%, #5b619d 23%, #838de8 32%, #838de8 32%, #5b619d 33%, #838de8 38%, #5b619d 41%, #838de8 59%, #5b619d 61%, #838de8 78%, #5b619d 91%, #5b619d 100%);
+    30% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbce 8%,#bbfbd8 18%,#cafce0 28%,#d6fce6 38%,#e0fcea 48%,#ecfcef 58%,#e0fcea 60%,#d6fce6 78%,#cafce0 88%,#bbfbd8 98%,#a7fbce 108%);
+}
+    35% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbc0 6%,#bbfbcd 16%,#cafcd7 26%,#d6fcdf 36%,#e0fce5 46%,#ecfcec 56%,#e0fce5 60%,#d6fcdf 76%,#cafcd7 86%,#bbfbcd 96%,#a7fbc0 106%);
+}
+    40% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbb2 4%,#bbfbc2 14%,#cafccf 24%,#d6fcd9 34%,#e0fce0 44%,#eefcec 54%,#e0fce0 60%,#d6fcd9 74%,#cafccf 84%,#bbfbc2 94%,#a7fbb2 104%);
+}
+    45% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #aafba7 2%,#befbbb 12%,#cdfcca 22%,#d9fcd6 32%,#e4fce0 42%,#f1fcec 52%,#e4fce0 60%,#d9fcd6 72%,#cdfcca 82%,#befbbb 92%,#aafba7 102%);
 }
     50% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #838de8 0%, #5b619d 24%, #838de8 33%, #838de8 33%, #5b619d 34%, #838de8 39%, #5b619d 42%, #838de8 60%, #5b619d 62%, #838de8 79%, #5b619d 92%, #5b619d 100%);
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #b8fba7 0%,#c9fbbb 10%,#d6fcca 20%,#dffcd6 30%,#e9fce0 40%,#f4fcec 50%,#e9fce0 60%,#dffcd6 70%,#d6fcca 80%,#c9fbbb 90%,#b8fba7 100%);
 }
-    63% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #82e8d9 0%, #5b9d94 25%, #82e8d9 34%, #82e8d9 34%, #5b9d94 35%, #82e8d9 40%, #5b9d94 43%, #82e8d9 61%, #5b9d94 63%, #82e8d9 80%, #5b9d94 93%, #5b9d94 100%);
+    55% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #aafba7 2%,#befbbb 12%,#cdfcca 22%,#d9fcd6 32%,#e4fce0 42%,#f1fcec 52%,#e4fce0 60%,#d9fcd6 72%,#cdfcca 82%,#befbbb 92%,#aafba7 102%);
+}
+    60% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbb2 4%,#bbfbc2 14%,#cafccf 24%,#d6fcd9 34%,#e0fce0 44%,#eefcec 54%,#e0fce0 60%,#d6fcd9 74%,#cafccf 84%,#bbfbc2 94%,#a7fbb2 104%);
+}
+    65% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbc0 6%,#bbfbcd 16%,#cafcd7 26%,#d6fcdf 36%,#e0fce5 46%,#ecfcec 56%,#e0fce5 60%,#d6fcdf 76%,#cafcd7 86%,#bbfbcd 96%,#a7fbc0 106%);
+}
+    70% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbce 8%,#bbfbd8 18%,#cafce0 28%,#d6fce6 38%,#e0fcea 48%,#ecfcef 58%,#e0fcea 60%,#d6fce6 78%,#cafce0 88%,#bbfbd8 98%,#a7fbce 108%);
 }
     75% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #82e8d9 0%, #5b9d94 26%, #82e8d9 35%, #82e8d9 35%, #5b9d94 36%, #82e8d9 41%, #5b9d94 44%, #82e8d9 62%, #5b9d94 64%, #82e8d9 81%, #5b9d94 94%, #5b9d94 100%);
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbdc 10%,#bbfbe2 20%,#cafce8 30%,#d6fcec 40%,#e0fcee 50%,#ecfcf2 60%,#e0fcee 60%,#d6fcec 80%,#cafce8 90%,#bbfbe2 100%,#a7fbdc 110%);
 }
-    88% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #82e8d9 0%, #5b9d94 27%, #82e8d9 36%, #82e8d9 36%, #5b9d94 37%, #82e8d9 42%, #5b9d94 45%, #82e8d9 63%, #5b9d94 65%, #82e8d9 82%, #5b9d94 95%, #5b9d94 100%);
+    80% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbea 8%,#bbfbed 18%,#cafcf0 28%,#d6fcf3 38%,#e0fcf3 48%,#ecfcf4 58%,#e0fcf3 60%,#d6fcf3 78%,#cafcf0 88%,#bbfbed 98%,#a7fbea 108%);
+}
+    85% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7fbf8 6%,#bbfbf8 16%,#cafcf9 26%,#d6fcf9 36%,#e0fcf8 46%,#ecfcf7 56%,#e0fcf8 60%,#d6fcf9 76%,#cafcf9 86%,#bbfbf8 96%,#a7fbf8 106%);
+}
+    90% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7f0fb 4%,#bbf4fb 14%,#caf7fc 24%,#d6f9fc 34%,#e0fcfc 44%,#ecfcfa 54%,#e0fcfc 60%,#d6f9fc 74%,#caf7fc 84%,#bbf4fb 94%,#a7f0fb 104%);
+}
+    95% {
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7e2fb 2%,#bbe9fb 12%,#caeffc 22%,#d6f3fc 32%,#e0f7fc 42%,#ecfcfc 52%,#e0f7fc 60%,#d6f3fc 72%,#caeffc 82%,#bbe9fb 92%,#a7e2fb 102%);
 }
     100% {
-    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #82e8d9 0%, #5b9d94 28%, #82e8d9 37%, #82e8d9 37%, #5b9d94 38%, #82e8d9 43%, #5b9d94 46%, #82e8d9 64%, #5b9d94 66%, #82e8d9 83%, #5b9d94 96%, #5b9d94 100%);
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #a7d4fb 0%,#badefb 10%,#c9e6fc 20%,#d5ecfc 30%,#e0f2fc 40%,#ecf9fc 50%,#e0f2fc 60%,#d5ecfc 70%,#c9e6fc 80%,#badefb 90%,#a7d4fb 100%); 
 }
-}
+} 
