@@ -12,7 +12,7 @@ function app() {
 
     function count() {}
 
-    function convertTimeToRGB(times) {}
+    function convertTimeToRGB(times) { }
 
     var span = document.querySelector('.clock-text span');
     var body = document.querySelector('body');
@@ -49,9 +49,9 @@ function app() {
         var d = new Date();
 
         
-
-// The 'count' Function: first off, we have a named function followed by an empty set of '()'... 
-// the empty round brackets signify that this is going to be an object. The first variable 'd' is 
+// The 'count' Function: 
+// First off, we have a named function followed by an empty set of '()'... 
+// the empty round brackets signify that this is a going to be an object. The first variable 'd' is 
 // to create a new 'Date' object.... in JS, the 'Date' object already has pre-inherited functionality:
 // that is, it will capture an instance of the current date. By accessing that functionality in a 
 // variable we can put it's capacity towards a greater purpose, and by calling it 'd' we can save 
