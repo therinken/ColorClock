@@ -67,7 +67,7 @@ function app() {
             var num = d[functionName]();
             return num < 10 ? "0" + num : num;
         });
-        
+
 // Our next variable, 'time2' will take the 'parts' Array and expand its purpose according to the 
 // functionality of the JS 'map' object which takes the instances of an Array and re-maps them with 
 // new values according to the properties it calls from it's inherited library of methods within 
@@ -105,13 +105,12 @@ function app() {
 
         
 
-// Our next function 'convertTimeToRGB' is an object that shall attempt to perform its namesake without 
-// the slightest sense of irony or synchronicity. The first part of the function has little to do with 
-// its essential purpose being another method to debug ones code. This particular method is an 'if-throw' 
-// statement that safeguards the output of the function by maintaining the Date structure of the Array. 
-// It says, that if the returned result of the times.forEach method is neither an instance of the times 
-// Array or ('||') if it is, but is greater than 3 instances long there shall be a big nasty error 
-// thrown in the coders face. 
+// Our next function 'convertTimeToRGB' is an object that shall attempt to perform its namesake. The first 
+// part of the function has little to do with its essential purpose being another method to debug ones 
+// code. This particular method is an 'if-throw' statement that safeguards the output of the function by 
+// maintaining the Date structure of the Array. It says, that if the returned result of the times.forEach 
+// method is neither an instance of the times Array or ('||') if it is, but is greater than 3 instances 
+// long there shall be a big nasty error thrown in the coders face. 
 
 		var ranges = [24, 60, 60],
             result = [];
@@ -151,7 +150,8 @@ function app() {
 // 'app' wants there to be a repeatable action to be performed... go do this, get some facts... bring the 
 // facts back, teach them some new tricks and then go get some more... and just keep on doing it. And, if 
 // you do it really quickly will let you rest for approximately 1000 milliseconds before we start getting 
-// all pissy and pull out the belt. And, thats about it. I know a little bit more and am a better man 
-// for it.
+// all pissy. 
+// 
+// And, thats about it. I know a little bit more and am a better man for it.
 // 
 // 
