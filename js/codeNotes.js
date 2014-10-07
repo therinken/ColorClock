@@ -1,0 +1,161 @@
+window.onload = app;
+
+// When the window loads, run the function called 'app'
+
+// First off, I've found that if I fold up a function to its main aspects, it's easier to get an 
+// idea of how things are working...
+
+function app() {
+    "use strict";
+
+    function handleSecond() {}
+
+    function count() {}
+
+    function convertTimeToRGB(times) {}
+
+    var span = document.querySelector('.clock-text span');
+    var body = document.querySelector('body');
+
+    setInterval(handleSecond, 1000);
+}
+
+// Folded up, its clear to see that this is an application with a function called 'app'... iside of 
+// 'app' are three distinct functions, two variables querying the DOM and 'setInterval' which 
+// repeatably executes a snippet of code or sets a timeout on the code that it is nested within.
+// 'app' is a thing, an object... it has a purpose that can be called into duty and perform a
+// unique functionality without having to repeat itself.
+
+// So, if we unwrap the functionality of 'app', we can see what makes it valuable. Perhaps add it 
+// to our own personal toolset or re-usable snippet library. This particular application is meant to 
+// put a timestamp into an html page. The first function is a 'try-catch' error debugging method called 
+// 'handleSecond'
+
+	function handleSecond() {
+        try {
+        	count();
+        } catch (e) {
+            console.log("error:", e, e.stack);
+        }
+    }
+
+// Is this function absolutely necessary? I mean, could we just cut it out and still have a working
+// application? Indeed... it's sole purpose is an attempt to try-and-catch a discrepancy in the code 
+// and log that error out to the console. It might be helpful in larger applications, but not 
+// absolutely important for this one. Nonetheless, this particular 'try and catch' is taking a look 
+// inside the 'count' function and narrowing it's scope to errors (e) in the stack.
+
+	function count() {
+        var d = new Date();
+
+        
+
+// The 'count' Function: first off, we have a named function followed by an empty set of '()'... 
+// the empty round brackets signify that this is going to be an object. The first variable 'd' is 
+// to create a new 'Date' object.... in JS, the 'Date' object already has pre-inherited functionality:
+// that is, it will capture an instance of the current date. By accessing that functionality in a 
+// variable we can put it's capacity towards a greater purpose, and by calling it 'd' we can save 
+// the pain of having to type more than is absolutely necessary.
+
+		var parts = ['getHours', 'getMinutes', 'getSeconds'];
+        
+
+// The next variable 'parts' creates an Array of methods that also have pre-inherited functionality 
+// in JS... and they do exactly what they say they will, calling them into duty will have a pre-
+// determined predictable set of results, but making them into an Array gives them the possibility to 
+// be shaped for a greater responsibilty beyond there limited function.
+
+		var time2 = parts.map(function(functionName) {
+            var num = d[functionName]();
+            return num < 10 ? "0" + num : num;
+        });
+
+// Our next variable, 'time2' will take the 'parts' Array and expand its purpose according to the 
+// functionality of the JS 'map' object which takes the instances of an Array and re-maps them with 
+// new values according to the properties it calls from it's inherited library of methods within 
+// the Map prototype. 
+// For this instance a new function called 'functionName' will be created but instead of utilizing one
+// of the many methods available to the 'map' object. This function, nested inside the 'count' 
+// function within the 'time2' variable that is attempting to repurpose the 'parts' Array, will 
+// call a new variable 'num' that will take our new re-purposed Array and give it a new habitation 
+// according to the inherited functionality of 'd'. In other words, our 'parts' Array (hours, minutes,
+// and seconds) will be reformatted into the inherant structure of the Date object.
+// And then, there is a return argument that asks if, for any reason, that there should be an instance 
+// (within our new repurposed Array) that happens to be less than 10 it shall thenceforth have a nice, 
+// lovely '0' added to its pre-naughty self until it (the instance on the chopping block) is in the 
+//  unfortunate/fortunate (depending on your perspective) position of being greater than 10, they 
+//  shall continue along on their merry ways without so much as a peep from 'app' (or me).
+
+		span.textContent = time2.join(":");
+
+        body.style['background-color'] =
+            "rgb(" +
+            convertTimeToRGB(time2).join(',') +
+            ")";
+
+//  After that, we are asking 'app' to look out into the DOM to find a <span> tag and append the 
+//  'textDocument' functionality (which is to access and search all associated documents for text within
+//  whatever is pre-appended (in this case...span)) and to utlilize the join method and seperate each 
+//  instance with a colon. And, finally, to find all properties associated with the <body> tag style 
+//  'background-color' and look specifically for any instance of "rgb(" concatenate the convertTimeToRGB 
+//  function and join each instance with a following comma and a closing round bracket.
+
+	function convertTimeToRGB(times) {
+    	if(!(times instanceof Array) || times.length !== 3){
+    		throw new Error("times should be an array of 3 numbers");
+    	}
+
+        
+
+// Our next function 'convertTimeToRGB' is an object that shall attempt to perform its namesake. The first 
+// part of the function has little to do with its essential purpose being another method to debug ones 
+// code. This particular method is an 'if-throw' statement that safeguards the output of the function by 
+// maintaining the Date structure of the Array. It says, that if the returned result of the times.forEach 
+// method is neither an instance of the times Array or ('||') if it is, but is greater than 3 instances 
+// long there shall be a big nasty error thrown in the coders face. 
+
+		var ranges = [24, 60, 60],
+            result = [];
+
+        
+
+// The convertTimeToRGB(times) function has two variables, the first 'ranges' 
+// is creating an array of the ranges that we want our convertTimeToRGB(times) function to be limted by 
+// (Hours in a day/24, Minutes in an hour/60, and Seconds in a minute/60) and below that an empty array 
+// called 'result' which will take the resulting Array of the forEach method and repurpose them like the 
+// map method in the 'count' function above.
+
+		times.forEach(function(time, index) {
+            result[index] = ~~ (time / ranges[index] * 255);
+        });
+
+        return result;
+    }
+
+// The times.forEach method creates an Array based on the time of each instance and gives it an index 
+// position. The nested functionality of this Array is to focus it's intentions on making the indexed 
+// results be equal to the quotient of the actual time divided by the ranges index value and position 
+// and multiply this by 255 and keep the results rounded to the nearest whole number ('~~'). Why in 
+// bloody hell would I ever want to do that you ask???? Well, you wouldn't unless it was absolutely
+// mandatory of course. But, you never know when you might need to have the backgound color being driven
+// by a close-to-random preprocessor such as the RGB values of a complex gradient output by the current 
+// time.
+//  
+// Finally, we close out this shindig with ...
+
+	var span = document.querySelector('.clock-text span');
+    var body = document.querySelector('body');
+
+    setInterval(handleSecond, 1000);
+
+// Both of these variables are inside the 'app' function but outside all the nested functions within 'app'
+// ...this is important because JS will look at these first, go out and query the DOM and then race back 
+// for a look-see at the functions. And, since these are at the end... it's probably safe to say that this 
+// 'app' wants there to be a repeatable action to be performed... go do this, get some facts... bring the 
+// facts back, teach them some new tricks and then go get some more... and just keep on doing it. And, if 
+// you do it really quickly will let you rest for approximately 1000 milliseconds before we start getting 
+// all pissy. 
+// 
+// And, thats about it. I know a little bit more and am a better man for it.
+// 
+// 
