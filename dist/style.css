@@ -1,5 +1,6 @@
 *, *:before, *:after {
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
 @font-face {
     font-family:'Averia Sans Libre';
@@ -13,7 +14,8 @@ html, body {
 }
 body {
     background-color: red;
-    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+            transition: all 2s ease;
 }
 .clock-text {
     font-size: 3em;
@@ -27,9 +29,14 @@ body {
     left: 50%;
     max-width: 100%;
     padding: 2rem;
-    transform: translate(-50%, -50%);
-    transition: all .5s ease;
-    transform-origin: center center;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
     z-index: 1;
     min-width: 320px;
 }
@@ -39,7 +46,8 @@ body {
     height:.025em;
     background-color: white;
     width: 0;
-    transition: all .25s ease;
+    -webkit-transition: all .25s ease;
+            transition: all .25s ease;
 }
 @media (min-width: 600px) {
     .clock-text {
