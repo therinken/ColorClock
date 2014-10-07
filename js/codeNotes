@@ -136,7 +136,9 @@ function app() {
 // and multiply this by 255 and keep the results rounded to the nearest whole number ('~~'). Why in 
 // bloody hell would I ever want to do that you ask???? Well, you wouldn't unless it was absolutely
 // mandatory of course. But, you never know when you might need to have the backgound color being driven
-// by a random preprocessor such as the RGB values of a complex gradient output by the current time. 
+// by a close-to-random preprocessor such as the RGB values of a complex gradient output by the current 
+// time.
+//  
 // Finally, we close out this shindig with ...
 
 	var span = document.querySelector('.clock-text span');
