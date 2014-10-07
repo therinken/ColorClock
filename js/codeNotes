@@ -6,11 +6,56 @@ window.onload = app;
 // idea of how things are working...
 
 function app() {
-	"use strict";
+    "use strict";
 
-    function handleSecond() {};
-    function count() {};
-    function convertTimeToRGB(times) {};
+    function handleSecond() {
+        try {
+        	count();
+        } catch (e) {
+            console.log("error:", e, e.stack);
+        }
+    }
+
+    function count() {
+        var d = new Date();
+
+        // prefixing with 0s
+        // method 2
+        var parts = ['getHours', 'getMinutes', 'getSeconds'];
+        var time2 = parts.map(function(functionName) {
+            var num = d[functionName]();
+            return num < 10 ? "0" + num : num;
+        });
+
+        span.textContent = time2.join(":");
+
+        body.style['background-color'] =
+            "rgb(" +
+            convertTimeToRGB(time2).join(',') +
+            ")";
+
+        // convert to HEX :-)
+        // console.log(
+        // 	convertTimeToRGB(time2).map(function(value){
+        // 		return value.toString(16);
+        // 	}).join(":")
+        // )
+    }
+
+    function convertTimeToRGB(times) {
+    	if(!(times instanceof Array) || times.length !== 3){
+    		throw new Error("times should be an array of 3 numbers");
+    	}
+
+        var ranges = [24, 60, 60],
+            result = [];
+
+        times.forEach(function(time, index) {
+            result[index] = ~~ (time / ranges[index] * 255);
+        });
+
+        return result;
+    }
 
     var span = document.querySelector('.clock-text span');
     var body = document.querySelector('body');
@@ -18,9 +63,9 @@ function app() {
     setInterval(handleSecond, 1000);
 }
 
-// The application is a function called 'app'... iside of 'app' are three distinct functions, two variables
-// querying the DOM and 'setInterval' which repeatably executes a snippet of code or sets a timeout
-// on the code that it is nested within.
+// Folded up, its clear to see that this is an application with a function called 'app'... iside of 
+// 'app' are three distinct functions, two variables querying the DOM and 'setInterval' which 
+// repeatably executes a snippet of code or sets a timeout on the code that it is nested within.
 // 'app' is a thing, an object... it has a purpose that can be called into duty and perform a
 // unique functionality without having to repeat itself.
 
